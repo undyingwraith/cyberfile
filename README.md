@@ -1,7 +1,20 @@
-# Tauri + Preact + Typescript
+# Cyberfile
 
-This template should help get you started developing with Tauri, Preact and Typescript in Vite.
+A Cyberpunk 2077 inspired file manager.
 
-## Recommended IDE Setup
+> [!WARNING]  
+> This project is currently more like a prototype rather than an actual program. You WILL encounter issues!
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+![screenshot](./img/screenshot1.png)
+
+## Building
+```bash
+yarn install
+yarn tauri build
+```
+
+## Developing
+```bash
+yarn install
+yarn tauri dev
+```
