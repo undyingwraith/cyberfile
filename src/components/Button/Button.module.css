@@ -7,7 +7,7 @@
 	/* Cut size */
 	--cs: 10px;
 	/* Border width */
-	--bw: 1px;
+	--bw: 2px;
 
 	clip-path: polygon(0 0,
 			100% 0,
@@ -29,4 +29,8 @@
 			100% calc(100% - var(--cs)),
 			calc(100% - var(--cs)) 100%,
 			calc(100% - var(--cs)) calc(100% - var(--bw)));
+}
+
+li .button {
+	width: calc(100% - 10px);
 }

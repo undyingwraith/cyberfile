@@ -7,7 +7,7 @@
 	color: #f6f6f6;
 	--background-color: #2f2f2f;
 	background: transparent;
-	--color-primary: #ff0000;
+	--color-primary: #FF3D00;
 	--color1: #FF3D00;
 	--color2: #00BFAE;
 	--color3: #8C1BFF;
@@ -25,6 +25,8 @@
 
 body {
 	background-color: var(--color-background);
+	width: 100vw;
+	height: 100vh;
 	overflow: hidden;
 }
 
@@ -34,6 +36,7 @@ body {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	gap: 10px;
 }
 
 #root>div {
@@ -41,6 +44,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	overflow: hidden;
+	gap: 10px;
 }
 
 header {
@@ -50,21 +54,19 @@ header {
 
 main {
 	flex-grow: 1;
-	overflow: scroll;
+	overflow: auto;
+	padding: 5px;
+	justify-content: center;
+	height: 100%;
 }
 
 aside menu {
-	margin: 5px;
 	padding: 0;
 	width: 200px;
 }
 
 aside menu li {
 	list-style: none;
-}
-
-aside menu li div {
-	width: 100%;
 }
 
 input {
