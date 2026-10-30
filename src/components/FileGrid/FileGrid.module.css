@@ -1,0 +1,67 @@
+.item.directory {
+	border-left-color: var(--color2);
+}
+
+.item.executable {
+	border-left-color: var(--color6);
+}
+
+.item {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+	border-left: 10px solid var(--color3);
+	background-color: var(--color-background);
+
+	/* Cut size */
+	--cs: 20px;
+	/* Border width */
+	--bw: 1px;
+
+	clip-path: polygon(0 0,
+			100% 0,
+			100% calc(100% - var(--cs)),
+			calc(100% - var(--cs)) 100%,
+			0 100%);
+}
+
+.item::before {
+	content: "";
+	position: absolute;
+	left: 2px;
+	top: 0;
+	border: var(--bw) solid var(--color-primary);
+	height: calc(100% - (2 * var(--bw)));
+	width: calc(100% - (2 * var(--bw)) - 2px);
+	display: inline-block;
+
+
+	clip-path: polygon(0 0,
+			100% 0,
+			100% calc(100% - var(--cs)),
+			calc(100% - var(--cs)) 100%,
+			0 100%);
+}
+
+.item::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	background-color: var(--color-primary);
+	clip-path: polygon(calc(100% - var(--bw)) calc(100% - var(--cs)),
+			100% calc(100% - var(--cs)),
+			calc(100% - var(--cs)) 100%,
+			calc(100% - var(--cs)) calc(100% - var(--bw)));
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 5px;
+}

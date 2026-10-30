@@ -1,0 +1,32 @@
+.button {
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid var(--color-primary);
+	background-color: var(--color-background);
+
+	/* Cut size */
+	--cs: 10px;
+	/* Border width */
+	--bw: 1px;
+
+	clip-path: polygon(0 0,
+			100% 0,
+			100% calc(100% - var(--cs)),
+			calc(100% - var(--cs)) 100%,
+			0 100%);
+}
+
+.button::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	background-color: var(--color-primary);
+	clip-path: polygon(calc(100% - var(--bw)) calc(100% - var(--cs)),
+			100% calc(100% - var(--cs)),
+			calc(100% - var(--cs)) 100%,
+			calc(100% - var(--cs)) calc(100% - var(--bw)));
+}
